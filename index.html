@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+            <h1>📝 Advanced To-Do</h1>
+            <p>Organize your tasks efficiently and boost productivity</p>
+        </div>
+
+        <div class="app-card">
+            <div class="task-input-section">
+                <input type="text" class="task-input" id="taskInput" placeholder="Add a new task..." maxlength="100">
+                <input type="datetime-local" class="date-input" id="dueDateInput">
+                <select class="priority-select" id="prioritySelect">
+                    <option value="low"> 🟢 Low</option>
+                    <option value="medium">🟡 Medium</option>
+                    <option value="high">🔴 High</option>
+                </select>
+                <input type="text" class="category-input" id="categoryInput" placeholder="Category" maxlength="20">
+                <button class="add-btn" id="addBtn">➕ Add Task</button>
+            </div>
+
+            <div class="task-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="totalTasks">0</div>
+                    <div class="stat-label">Total Tasks</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="activeTasks">0</div>
+                    <div class="stat-label">Active</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="completedTasks">0</div>
+                    <div class="stat-label">Completed</div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search tasks...">
+                </div>
+
+                <button class="export-btn" id="exportBtn">📄 Export</button>
+            </div>
+
+            <div class="task-list" id="taskList">
+                <div class="empty-state" id="emptyState">
+                    <h3>🎯 No tasks yet!</h3>
+                    <p>Add your first task above to get started</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
